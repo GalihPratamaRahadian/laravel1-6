@@ -22,7 +22,7 @@ class CobaController extends Controller
         $request->validate([
             'nama' => 'required|unique:friends|max:255',
             'no_tlp' => 'required|numeric',
-            'alamat' => 'nullable',
+            'alamat' => 'required',
         ]);
 
         $friends = new Friends;
@@ -39,7 +39,7 @@ class CobaController extends Controller
     public function show($id)
     {
         $friend = Friends::where('id', $id)->first();
-        return  view('friends.show',['friend' => $friend]);
+        return view('friends.show',['friend' => $friend]);
     }
     
     public function edit($id)

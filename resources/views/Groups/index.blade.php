@@ -17,7 +17,7 @@
     @foreach($group->friends as $friend)
       <li class="list-group-item d-flex justify-content-between align-items-center">
       {{$friend->nama}}
-      <form action="/Groups/deleteaddmember/{{ $friend->id }}" method="POST">
+      <form action="/groups/deleteaddmember/{{ $friend->id }}" method="POST">
     @csrf
     @method('PUT')
     <button type="submit" class="bedge card-link btn-danger">X</button>

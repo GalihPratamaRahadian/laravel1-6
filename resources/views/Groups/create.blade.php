@@ -14,7 +14,7 @@
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Description</label>
-    <input type="text" class="form-control" name="alamat" id="exampleInputPassword1" value="{{old('description')}}">
+    <input type="text" class="form-control" name="description" id="exampleInputPassword1" value="{{old('description')}}">
     @error('description')
     <div class="alert alert-danger">{{ $message }}</div>
  @enderror
